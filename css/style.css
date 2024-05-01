@@ -9,13 +9,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-block-start: 100px;
     background-color: rgba(128, 128, 128, 0.548);
 }
 
 .btn {
-    border: rgb(71, 114, 8) 1px solid;
-    color: rgb(71, 114, 8);
+    border: rgb(0, 0, 0) 1px solid;
+    color: yellow;
     padding: 10px;
     border-radius: 6px;
     width: fit-content;
@@ -28,16 +28,6 @@
     color: white;
 }
 
-
-@media and (max-width: 768px) {}
-
-@media screen and (max-height: 768px) {
-    .arriTemp {
-        margin-top: 50px;
-    }
-
-}
-
 .bg {
 
     position: fixed;
@@ -45,8 +35,4 @@
     height: auto;
     z-index: -1;
     min-height: 380px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* position: relative; */
 }
