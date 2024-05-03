@@ -13,6 +13,10 @@ main {
     display: none;
 }
 
+.si-no {
+    margin-top: 10px;
+}
+
 .pumImg {
     width: auto;
     height: 100%;
