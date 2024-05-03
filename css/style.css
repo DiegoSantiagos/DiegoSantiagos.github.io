@@ -4,12 +4,26 @@
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    flex-direction: column
+}
+
+.hide {
+    display: none;
+}
+
+.pumImg {
+    width: auto;
+    height: 100%;
+}
+
 .arriTemp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-block-start: 100px;
+    /* margin-block-start: 100px; */
     background-color: rgba(128, 128, 128, 0.548);
 }
 
