@@ -1,5 +1,8 @@
 // var h1Element = document.querySelector('.lbltitulo');
 // h1Element.innerText = h1Element.innerText + ' tu casa';
+document.addEventListener('keydown', function () {
+    pumImg();
+});
 
 function hideElement() {
     main.style.display = 'none';
@@ -13,3 +16,4 @@ function pumImg() {
         imgElement.style.display = 'none';
     }, 1000)
 }
+
