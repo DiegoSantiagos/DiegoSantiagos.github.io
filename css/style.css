@@ -13,6 +13,7 @@ section {
     align-items: center;
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 
 img {
