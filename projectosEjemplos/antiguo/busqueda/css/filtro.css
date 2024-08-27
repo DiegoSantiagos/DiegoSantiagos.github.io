@@ -1,0 +1,47 @@
+.container {
+    overflow: hidden;
+}
+
+.tipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    inline-size: auto;
+    block-size: auto;
+    padding: 10PX 0PX;
+}
+
+.filterDiv {
+    display: none;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn-f {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn-f:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+
+@media screen and (max-width: 768px) {
+    .tipo {
+        flex-direction: row;
+        inline-size: 100%;
+    }
+
+    .btn-f {
+        border: 1px black solid;
+    }
+}
