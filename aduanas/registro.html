@@ -7,34 +7,37 @@
 </head>
 <body>
   <nav>
-    <a href="login.html">Salir</a>
-    <span>Registro Previo</span>
+    <a href="login.html">Salir</a> | <a href="dashboard.html">Ir al Panel</a>
   </nav>
   <div class="container">
     <h2>Registro Previo de Viaje</h2>
-    <form>
+    <form id="regForm">
+      <!-- Datos Personales -->
       <fieldset>
         <legend>Datos Personales</legend>
         <label>Nombre completo</label>
-        <input type="text" placeholder="Juan Pérez">
+        <input type="text" placeholder="Juan Pérez" required>
         <label>Cédula / Pasaporte</label>
-        <input type="text" placeholder="12.345.678-9">
+        <input type="text" placeholder="12.345.678-9" required>
         <label>Fecha de nacimiento</label>
-        <input type="date">
+        <input type="date" required>
       </fieldset>
+      <!-- Datos del Vehículo -->
       <fieldset>
         <legend>Datos del Vehículo</legend>
         <label>Patente</label>
-        <input type="text" placeholder="ABC-1234">
+        <input type="text" placeholder="ABC-1234" required>
         <label>Tipo de vehículo</label>
-        <select>
+        <select required>
+          <option value="">Seleccione...</option>
           <option>Auto</option>
           <option>Moto</option>
           <option>Camión</option>
         </select>
         <label>Marca / Modelo</label>
-        <input type="text" placeholder="Toyota Corolla">
+        <input type="text" placeholder="Toyota Corolla" required>
       </fieldset>
+      <!-- Declaración de Mercancías -->
       <fieldset>
         <legend>Declaración de Mercancías</legend>
         <label><input type="checkbox"> Productos animales</label>
@@ -42,9 +45,40 @@
         <label><input type="checkbox"> Otros</label>
         <button type="button">+ Agregar detalle</button>
       </fieldset>
-      <button type="button">Validar documentos</button>
-      <button type="submit" disabled>Generar formulario</button>
+
+      <button type="button" id="btnValidar">Validar documentos</button>
+      <button type="submit" id="btnGenerar" disabled>Generar formulario</button>
     </form>
+
+    <!-- Estado de Validación -->
+    <div id="validationStatus" style="display:none; margin-top:1rem; padding:1rem; border:1px solid #ccc; border-radius:4px;">
+      <h3>Estado de Validación</h3>
+      <p id="msgIdentidad">✔️ Identidad validada</p>
+      <p id="msgVehiculo">✔️ Vehículo validado</p>
+      <p id="msgDeclaracion">✔️ Declaraciones validadas</p>
+    </div>
+
+    <!-- Vista previa y descarga del PDF -->
+    <div id="previewForm" style="display:none; margin-top:1rem;">
+      <h3>Formulario Generado</h3>
+      <iframe id="pdfPreview" src="" width="100%" height="400px"></iframe>
+      <a id="downloadPdf" href="#" download="formulario.pdf">📥 Descargar PDF</a>
+    </div>
   </div>
+
+  <script>
+    // Simula validación
+    document.getElementById('btnValidar').onclick = () => {
+      document.getElementById('validationStatus').style.display = 'block';
+      document.getElementById('btnGenerar').disabled = false;
+    };
+    // Simula generación
+    document.getElementById('regForm').onsubmit = e => {
+      e.preventDefault();
+      document.getElementById('previewForm').style.display = 'block';
+      document.getElementById('pdfPreview').src = 'https://example.com/formulario.pdf';
+      document.getElementById('downloadPdf').href = 'https://example.com/formulario.pdf';
+    };
+  </script>
 </body>
 </html>

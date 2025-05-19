@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Escaneo QR - Aduanas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="dashboard.html">Volver al Panel</a> | <a href="login.html">Cerrar sesión</a>
+  </nav>
+  <div class="container">
+    <h2>Escanear Formulario (QR)</h2>
+    <label for="qrInput">Código QR (texto o URL):</label>
+    <input type="text" id="qrInput" placeholder="Pega aquí el valor del QR">
+    <button id="btnScan">Escanear</button>
+
+    <div id="scanResult" style="display:none; margin-top:1rem; padding:1rem; border:1px solid #ccc; border-radius:4px;">
+      <h3>Resultado de Escaneo</h3>
+      <p><strong>ID Reserva:</strong> <span id="reservaId">12345</span></p>
+      <p><strong>Estado:</strong> <span id="estadoReserva">Aprobado</span></p>
+      <p><strong>Alertas:</strong> <span id="alertas">Ninguna</span></p>
+      <a href="dashboard.html"><button id="btnInspect">Ir al Panel</button></a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('btnScan').onclick = () => {
+      document.getElementById('scanResult').style.display = 'block';
+      document.getElementById('reservaId').textContent = '2025-0001';
+      document.getElementById('estadoReserva').textContent = 'Pendiente';
+      document.getElementById('alertas').textContent = 'Productos vegetales sin declarar';
+    };
+  </script>
+</body>
+</html>
