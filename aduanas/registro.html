@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro Previo de Viaje</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="login.html">Salir</a>
+    <span>Registro Previo</span>
+  </nav>
+  <div class="container">
+    <h2>Registro Previo de Viaje</h2>
+    <form>
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Juan Pérez">
+        <label>Cédula / Pasaporte</label>
+        <input type="text" placeholder="12.345.678-9">
+        <label>Fecha de nacimiento</label>
+        <input type="date">
+      </fieldset>
+      <fieldset>
+        <legend>Datos del Vehículo</legend>
+        <label>Patente</label>
+        <input type="text" placeholder="ABC-1234">
+        <label>Tipo de vehículo</label>
+        <select>
+          <option>Auto</option>
+          <option>Moto</option>
+          <option>Camión</option>
+        </select>
+        <label>Marca / Modelo</label>
+        <input type="text" placeholder="Toyota Corolla">
+      </fieldset>
+      <fieldset>
+        <legend>Declaración de Mercancías</legend>
+        <label><input type="checkbox"> Productos animales</label>
+        <label><input type="checkbox"> Productos vegetales</label>
+        <label><input type="checkbox"> Otros</label>
+        <button type="button">+ Agregar detalle</button>
+      </fieldset>
+      <button type="button">Validar documentos</button>
+      <button type="submit" disabled>Generar formulario</button>
+    </form>
+  </div>
+</body>
+</html>
